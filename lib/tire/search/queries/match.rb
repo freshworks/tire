@@ -37,3 +37,4 @@ module Tire
       end
     end
   end
+end
