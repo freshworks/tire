@@ -74,6 +74,9 @@ module Tire
       id       = get_id_from_document(document)
       document = convert_document_to_json(document)
 
+      #For debugging purposes - Hari
+      p "DEV INFO ::: Document [#{type}] Size is #{document.bytesize} bytes. - ID ##{id}"
+
       url  = id ? "#{self.url}/#{type}/#{id}" : "#{self.url}/#{type}/"
       url += "?percolate=#{percolate}" if percolate
 

@@ -82,6 +82,7 @@ namespace :tire do
       index.import(klass, params) do |documents|
 
         if total
+          Rails.logger.info "INFO FOR DEV ::: #{documents.size} getting indexed in index #{index.name.to_s} at #{Time.now}"
           done += documents.to_a.size
           # I CAN HAZ PROGREZ BAR LIEK HOMEBRU!
           percent  = ( (done.to_f / total) * 100 ).to_i
